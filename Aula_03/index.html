@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo pegar valor do input</title>
+</head>
+<body>
+    <div>
+        <h1>Calculadora automática do vinicius13</h1>
+        Digite o primeiro valor:
+        <input id="num1" name="num1" value="" type="text">
+    </div>
+    <div>
+        Digite o segundo valor:
+        <input id="num2" name="num2" value="" type="text">
+    </div>
+    <div>
+        <h2>Escolha a operação</h2>
+    </div>
+    <div>
+        <button id="botao1" onclick="ad()">Somar</button>
+        <button id="botao2" onclick="sub()">Subtrair</button>
+        <button id="botao3" onclick="mult()">Multiplicar</button>
+        <button id="botao4" onclick="divi()">Dividir</button>
+        <button id="botao5" onclick="limpar()">Limpar</button>
+
+        
+        <p>O resultado é: <span id="resultado">0</span></p>
+    </div>
+    <script src="js/executa.js"></script>
+</body>
+</html>
