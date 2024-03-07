@@ -9,7 +9,7 @@ function Quebrada(){
     //isso retorna True ou False
 }
 
-function lampLigada(){
+function lampTrocar(){
     if (!Quebrada()){
         if (!ligado){
             lampada.src = "img/ligada.jpg"
@@ -21,6 +21,13 @@ function lampLigada(){
             ligado = false
             texto.innerHTML = 'DESLIGADA';
         }
+    }
+}
+
+function lampLigada(){
+    if (!Quebrada()){
+        lampada.src = "img/ligada.jpg"
+        texto.innerHTML = 'LIGADA';
     }
 }
 
@@ -41,7 +48,7 @@ function lampRest(){
     texto.innerHTML = 'DESLIGADA';
 }
 
-ligar.addEventListener('click',lampLigada)
+ligar.addEventListener('click',lampTrocar)
 
 lampada.addEventListener('dblclick',lampQuebrar)
 rest.addEventListener('click',lampRest)
