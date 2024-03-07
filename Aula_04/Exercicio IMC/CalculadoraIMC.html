@@ -9,8 +9,26 @@
 </head>
 <body>
     <main>
-        <div>
+        <div id="calculadora">
             <h1>Calculadora IMC</h1>
+            <p>Informe a sua altura: <input id="altura" type="range" value="0" min="0" max="2.50" step="0.1" oninput="myFunction(this.value)" />
+            <span id="currentValue">0</span></p>
+            <p>Informe o seu peso:   <input id="peso" type="range" value="0" min="0" max="650" step="1" oninput="myFunction2(this.value)" />
+            <span id="currentValue2">0</span></p>
+            <p id="txtsexo">Informe o seu sexo:</p>
+            <form>
+                <input type="radio" id="masculino" name="fav_language" value="Masculino" oninput="sexo(this.value)">
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="fav_language" value="Feminino" oninput="sexo(this.value)">
+                <label for="feminino">Feminino</label><br>
+            </form>
+            <button id="calcular" onclick="calculo()">Calcular</button>
+        </div>
+        <div id="resultados">
+            <h2>Resultados</h2>
+            <p>- Seu IMC é de XXXXXX</p>
+            <h3>Diagnóstico:</h3>
+            <p>-</p>
         </div>
     </main>
     <script src="imcjs/CalculadoraIMC.js"></script>
