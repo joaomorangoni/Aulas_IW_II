@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 4</title>
+    <style>
+        button{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Interagindo com o usuário</h1>
+    <p id="cor">O texto receberá a cor do botão correspondente.</p>
+    <button id="botão1" onclick="b1()" value="Botão 01">Vermelho</button>
+    <button id="botão2" onclick="b2()" value="Botão 02">Azul</button>
+    <button id="botão3" onclick="b3()" value="Botão 03">Verde</button>
+    <p id="texto"></p>
+
+    <script>
+       var text = document.getElementById('texto') 
+       var cor = document.getElementById('cor')
+
+       function b1(){
+        texto.innerHTML = "Você clicou no Botão 01"
+        cor.style.color = "red"
+       } 
+
+       function b2(){
+        texto.innerHTML = "Você clicou no Botão 02"
+        cor.style.color = "blue"
+       } 
+
+       function b3(){
+        texto.innerHTML = "Você clicou no Botão 03"
+        cor.style.color = "green"
+       } 
+    </script>
+
+</body>
+</html>

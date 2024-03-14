@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 2</title>
+    <style>
+        button{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com o usuário</h1>
+    <button id="botão" onclick="inicio()">Clique para começar</button>
+    <p id="texto"></p>
+
+    <script>
+       var text = document.getElementById('texto') 
+
+       function inicio(){
+        var nome = prompt('Como você se chama? ')
+        texto.innerHTML = "Olá " + nome + ", é um prazer conhece-lo!"
+        
+       } 
+    </script>
+
+</body>
+</html>
