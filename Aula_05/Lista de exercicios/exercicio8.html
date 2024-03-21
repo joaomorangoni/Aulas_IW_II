@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 8</title>
+    <style>
+        button{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando Bhaskara</h1>
+    <button id="botão" onclick="inicio()">Calcular</button>
+    <p id="texto">Considerando uma equação no formato ax² + bx + c = 0, aperte o botão acima para calcular o valor de Δ</p>
+    <p id="texto2"></p>
+    <p id="texto3"></p>
+
+    <script>
+       function inicio(){
+        var prim = parseFloat(prompt('Qual o valor de a? '))
+        var segun = parseFloat(prompt('Qual o valor de b? '))
+        var terc = parseFloat(prompt('Qual o valor de c? '))
+
+        var delta = ((segun * segun) - 4 * prim * terc)
+
+        texto.innerHTML = "A equação atual é " + prim + "x² + " + segun + "x + " + terc + " = 0"
+        texto2.innerHTML = "O cálculo realizado será Δ = " + segun + "² - 4 . " + prim + " . " + terc
+
+        if (delta < 0) {
+
+          texto3.innerHTML = "O valor calculado não existe."
+
+        }
+
+        else if(delta >= 0) {
+
+            texto3.innerHTML = "O Valor calculado foi Δ = " + delta
+
+        }
+       } 
+    </script>
+
+</body>
+</html>

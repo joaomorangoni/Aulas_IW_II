@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 7</title>
+    <style>
+        button{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <button id="botão" onclick="inicio()">Reajuste salarial</button>
+    <h1 id=grand></h1>
+    <p id="texto">Clique no botão acima para iniciar</p>
+    <p id="texto2"></p>
+    <p id="texto3"></p>
+
+    <script>
+       function inicio(){
+        var nome = prompt('Qual o nome do funcionário? ')
+        var sal = parseFloat(prompt('Qual o salário de ' + nome + '?'))
+        var ajuste = parseFloat(prompt('O salário de ' + nome + ' vai ser ajustado em que %?'))
+        grand.innerHTML = nome + " recebeu um aumento salarial!"
+
+        var final = (sal * ajuste / 100)
+        var diff = final + sal
+
+        texto.innerHTML = "O salário atual é de R$" + sal
+        texto2.innerHTML = "Com um aumento de " + ajuste + "%, o salário vai aumentar R$" + final + " no próximo mês"
+        texto3.innerHTML = "E a partir dai " + nome + " irá ganhar R$" + diff
+
+        console.log(sal)
+        console.log(ajuste)
+        console.log(final)
+        console.log(diff)
+       } 
+    </script>
+
+</body>
+</html>

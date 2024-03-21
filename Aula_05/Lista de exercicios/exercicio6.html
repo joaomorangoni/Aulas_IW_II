@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 6</title>
+    <style>
+        button{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Troco</h1>
+    <button id="botão" onclick="inicio()">Comprar produto</button>
+    <p id="texto"></p>
+    <p id="texto2"></p>
+    <p id="texto3"></p>
+
+    <script>
+       function inicio(){
+        var nome = prompt('Informe o nome do produto: ')
+        var preco = parseFloat(prompt('Informe o valor do produto R$: '))
+        var valor = parseFloat(prompt('Informe o valor recebido: '))
+        texto.innerHTML = "Você irá comprar " + nome + " por um preço de R$" + preco
+        texto2.innerHTML = "Você deu R$" + valor
+
+        var troco = valor - preco
+
+        texto3.innerHTML = "E receberá um troco de R$" + troco
+       } 
+    </script>
+
+</body>
+</html>
