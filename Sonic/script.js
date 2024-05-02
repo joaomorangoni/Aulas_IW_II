@@ -1,5 +1,8 @@
 const sonic = document.querySelector('.sonic');
 const spike = document.querySelector('.spikes');
+const botao = document.getElementById('botao');
+var pontos = 0;
+
 
 const jump = () => {
     sonic.classList.add('jump')
@@ -27,13 +30,31 @@ const loop = setInterval(() => {
 
         
         sonic.src = "./img/sonicdie.webp";
+        setTimeout(() => {
+            sonic.src = "./img/sonicdie.webp";
+        },120);
 
+        clearInterval(pontuacao);
         clearInterval(loop);
+        document.removeEventListener('keydown', jump)
 
-        console.log(sonic)
+
+        botao.style.display = 'block';
     }
 
 }, 10)
 
+function reiniciar() {
+    window.location.reload();
+}
+
+function tempo() {
+    var score = document.getElementById('score');
+    var pontos = parseInt(score.textContent)
+    pontos++;
+    score.textContent = pontos;
+}
+
+const pontuacao = setInterval(tempo, 100)
 
 document.addEventListener('keydown', jump);
